@@ -9,7 +9,7 @@
 <form action=salvar.php>
 <p>Nome</p>
 <input type=text name=nome1>
-<p>Data_Nascimento</p>
+<p>Data Nascimento</p>
 <input type=date name=datanasc1>
 <p>Salário</p>
 <input type=number name=salario1>
