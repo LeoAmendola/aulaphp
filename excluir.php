@@ -8,7 +8,7 @@ $dbh = new PDO($dsn, $user, $password);
 } catch (PDOException $e) {
 echo 'Connection failed: ' . $e->getMessage();
 }
-$count = $dbh->exec("delete from  exemplo1 
+$count = $dbh->exec("delete from  funcionarios 
                    where id=$id ");
 echo "<p>$count registro foi excluído</p>";
 echo "<br><br>
