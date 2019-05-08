@@ -52,7 +52,7 @@ echo 'Connection failed: ' . $e->getMessage();
         echo "<tr>";
         echo "<td>". $row['id'] . "</td>";
         echo "<td>". $row['nome'] . "</td>";
-        echo "<td>". $row['datanasc']. "</td>";
+        echo "<td>".date('d/m/Y', $row['datanasc']). "</td>";
 		echo "<td>R$ ". $row['salario'] . "</td>";
 echo "<td> <a href=editar.php?id=".$row['id'].">Editar</a></td>";
 echo "<td> <a href=excluir.php?id=".$row['id'].">Excluir</a></td>";
