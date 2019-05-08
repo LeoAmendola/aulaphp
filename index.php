@@ -46,18 +46,20 @@ $dbh = new PDO($dsn, $user, $password);
 } catch (PDOException $e) {
 echo 'Connection failed: ' . $e->getMessage();
 }
-        $sql = 'SELECT * FROM exemplo1';
+//$date = DateTime::createFromFormat('d/m/Y', $_GET['datanasc']);
+        $sql = 'SELECT * FROM funcionarios';
         foreach ($dbh->query($sql) as $row) {
         echo "<tr>";
         echo "<td>". $row['id'] . "</td>";
         echo "<td>". $row['nome'] . "</td>";
-        echo "<td>". $row['datanasc'] . "</td>";
-		echo "<td>". $row['salario'] . "</td>";
+        echo "<td>". $row['datanasc']. "</td>";
+		echo "<td>R$ ". $row['salario'] . "</td>";
 echo "<td> <a href=editar.php?id=".$row['id'].">Editar</a></td>";
 echo "<td> <a href=excluir.php?id=".$row['id'].">Excluir</a></td>";
         echo "</tr>";
         }
 ?>
+
     </tbody>
 </table>    
 </body>

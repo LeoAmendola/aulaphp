@@ -8,7 +8,7 @@ $dbh = new PDO($dsn, $user, $password);
 } catch (PDOException $e) {
 echo 'Connection failed: ' . $e->getMessage();
 }
-$sql = "SELECT * FROM exemplo1 where id=$id";
+$sql = "SELECT * FROM funcionarios where id=$id";
 foreach ($dbh->query($sql) as $row) {
     echo "<form action=salvar_editar.php>";
     echo "<p>Nome</p>";
@@ -18,7 +18,7 @@ foreach ($dbh->query($sql) as $row) {
     echo "<p><input type=date name=datanasc value=".
             $row['datanasc'] . ">";
 	echo "<p>Salário</p>";
-	echo"<p><input type=number name=salario value=".
+	echo"<p><input type=money_format name=salario value=".
 			$row['salario'] . ">";
     echo "<input type=hidden name=id value=". 
             $row['id'] . " >";

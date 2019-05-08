@@ -11,8 +11,8 @@ $dbh = new PDO($dsn, $user, $password);
 echo 'Connection failed: ' . $e->getMessage();
 }
 
-$count = $dbh->exec("insert into exemplo1(nome, datanasc, salario) 
-                values('$nome', '$datanasc', '$salario') ");
+$count = $dbh->exec("insert into funcionarios (nome, datanasc, salario) 
+                values('$nome', '$datanasc', '$salario')");
 
 echo "<p>$count registro foi incluído</p>";
 echo "<br><br><a href=index.php>Voltar</a>  ";

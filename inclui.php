@@ -12,7 +12,7 @@
 <p>Data Nascimento</p>
 <input type=date name=datanasc1>
 <p>Salário</p>
-<input type=number name=salario1>
+<input type=money_format name=salario1>
 <br><br>
 <input type=submit value=Salvar>
 </form> 

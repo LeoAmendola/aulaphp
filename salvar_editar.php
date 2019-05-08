@@ -12,7 +12,7 @@ $dbh = new PDO($dsn, $user, $password);
 echo 'Connection failed: ' . $e->getMessage();
 }
 $sql=
-$count = $dbh->exec("update exemplo1 set
+$count = $dbh->exec("update funcionarios set
                 nome='$nome',  
                 datanasc='$datanasc' ,
 				salario='$salario'
